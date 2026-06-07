@@ -385,7 +385,7 @@ items=("Identificando aparelho e ambiente..."
        "Checando Optional..."
        "Concluindo verificação de logcat de replay...")
 
-times=(3 7 23 16 4 5 500)
+times=(3 7 23 16 4 5 600)
 
 percent_targets=(13 28 43 57 72 88 100)
 
@@ -622,7 +622,7 @@ items=("Verificando Integridade de logs..."
        "Verificando ambiente e clipboard..."
        "Finalizando...")
 
-times=(10 700 30 15 500)
+times=(10 1500 30 15 500)
 
 percent_targets=(20 40 60 80 100)
 
