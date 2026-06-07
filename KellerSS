@@ -622,7 +622,7 @@ items=("Verificando Integridade de logs..."
        "Verificando ambiente e clipboard..."
        "Finalizando...")
 
-times=(10 1500 30 15 500)
+times=(10 1800 30 15 500)
 
 percent_targets=(20 40 60 80 100)
 
@@ -685,7 +685,13 @@ draw_bar() {
     done
 
     bar+="${WHITE}]${NC}"
-    echo -ne "$bar $percent% $timer $completed/${#items[@]}"
+if [ "$percent" -eq 100 ]; then
+    percent_text="${LIGHT_GREEN}${percent}%${NC}"
+else
+    percent_text="${percent}%"
+fi
+
+echo -ne "$bar $percent_text $timer $completed/${#items[@]}"
 }
 
 start_time=$(date +%s)
